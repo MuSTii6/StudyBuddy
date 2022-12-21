@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import studybuddy.studybuddy.model.ModulCreateDTO;
 import studybuddy.studybuddy.model.Modul;
 import studybuddy.studybuddy.repository.ModulRepository;
+import studybuddy.studybuddy.repository.ModulStudentAggregationDTO;
 
 @RestController
 public class ModulController {
@@ -43,6 +44,11 @@ public class ModulController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @GetMapping("/bymodul")
+    public ResponseEntity<List<ModulStudentAggregationDTO>> getModulStudentAggregation() {
+        return new ResponseEntity<>(modulRepository.getModulStudentAggregation(), HttpStatus.OK);
     }
 
 }
