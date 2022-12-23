@@ -21,7 +21,7 @@ public class StudentController {
     @Autowired
     StudentRepository studentRepository;
 
-    @PostMapping("/student")
+    @PostMapping("/api/student")
     public ResponseEntity<Student> createStudent(
             @RequestBody StudentCreateDTO fDTO) {
         Student fDAO = new Student(fDTO.getEmail(), fDTO.getName());
@@ -29,13 +29,13 @@ public class StudentController {
         return new ResponseEntity<>(f, HttpStatus.CREATED);
     }
 
-    @GetMapping("/student")
+    @GetMapping("/api/student")
     public ResponseEntity<List<Student>> getAllStudent() {
         List<Student> allFree = studentRepository.findAll();
         return new ResponseEntity<>(allFree, HttpStatus.OK);
     }
 
-    @GetMapping("/student/{id}")
+    @GetMapping("/api/student/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable String id) {
         Optional<Student> optStudent = studentRepository.findById(id);
         if (optStudent.isPresent()) {
