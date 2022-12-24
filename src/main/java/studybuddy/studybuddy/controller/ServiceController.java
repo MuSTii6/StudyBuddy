@@ -15,7 +15,7 @@ import studybuddy.studybuddy.model.ModulAssignDTO;
 import studybuddy.studybuddy.service.ModulService;
 
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/api/service")
 public class ServiceController {
     
     @Autowired
