@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@azure/msal-node": "^1.14.5",
+    "@auth0/auth0-spa-js": "^1.13.2",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
