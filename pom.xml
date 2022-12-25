@@ -85,8 +85,8 @@
 		        <configuration>
 		            <schemaVersion>v2</schemaVersion>
 		            <subscriptionId></subscriptionId>
-		            <resourceGroup>studybuddy-1671965803602-rg</resourceGroup>
-		            <appName>studybuddy-1671965803602</appName>
+		            <resourceGroup>studybuddy-1671963486148-rg</resourceGroup>
+		            <appName>studybuddy-1671963486148</appName>
 		            <pricingTier>F1</pricingTier>
 		            <region>centralus</region>
 		            <runtime>
